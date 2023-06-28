@@ -1,0 +1,33 @@
+﻿<Page x:Class="AccountingForAutoParts.View.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AccountingForAutoParts.View"
+      mc:Ignorable="d" 
+      Title="Customer" Width="940" Height="523">
+
+    <Grid Background="#FF15131B" HorizontalAlignment="Left" Width="942" Margin="0,0,0,-6">
+        <Label Content="Главная" HorizontalAlignment="Center" Margin="0,13,0,0" VerticalAlignment="Top" Height="94" Width="898" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="72" FontFamily="Times New Roman" FontWeight="Bold"/>
+
+        <Label Content="Здравствуйте: " HorizontalAlignment="Left" Margin="16,115,0,0" VerticalAlignment="Top" Height="63" Width="224" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="36" FontFamily="Times New Roman" FontWeight="Bold"/>
+
+        <Label Content="Ваш пароль" HorizontalAlignment="Left" Margin="16,191,0,0" VerticalAlignment="Top" Height="63" Width="224" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="36" FontFamily="Times New Roman" FontWeight="Bold"/>
+
+        <Label Content="Запчасти" HorizontalAlignment="Left" Margin="400,332,0,0" VerticalAlignment="Top" Height="63" Width="224" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="36" FontFamily="Times New Roman" FontWeight="Bold"/>
+
+        <Label Content="Заказы" HorizontalAlignment="Left" Margin="670,332,0,0" VerticalAlignment="Top" Height="63" Width="224" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="36" FontFamily="Times New Roman" FontWeight="Bold"/>
+
+        <Label x:Name="OrdersLabel" Content="OrdersLabe" HorizontalAlignment="Left" Margin="682,413,0,0" VerticalAlignment="Top" Height="63" Width="224" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="36" FontFamily="Times New Roman" FontWeight="Bold"/>
+
+        <Label Content="У вас:" HorizontalAlignment="Left" Margin="24,404,0,0" VerticalAlignment="Top" Height="63" Width="321" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="48" FontFamily="Times New Roman" FontWeight="Bold"/>
+
+        <Label x:Name="SparepartsLabel" Content="Spare_parts" HorizontalAlignment="Left" Margin="397,412,0,0" VerticalAlignment="Top" Height="63" Width="224" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="36" FontFamily="Times New Roman" FontWeight="Bold"/>
+        
+        <Label x:Name="UserNameLabel" Content="{Binding UserName}" HorizontalAlignment="Left" Margin="249,114,0,0" VerticalAlignment="Top" Height="63" Width="224" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="36" FontFamily="Times New Roman" FontWeight="Bold"/>
+        <Label x:Name="PasswordLabel"  Content="{Binding Password}" HorizontalAlignment="Left" Margin="249,180,0,0" VerticalAlignment="Top" Height="63" Width="224" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="36" FontFamily="Times New Roman" FontWeight="Bold"/>
+
+
+    </Grid>
+
+</Page>

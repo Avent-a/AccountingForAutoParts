@@ -1,0 +1,91 @@
+﻿<Page x:Class="AccountingForAutoParts.View.Spares"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Width="940" Height="523"
+      Title="Запчасти">
+
+    <Grid Background="#FF15131B" Margin="0,-1,0,0">
+        <!-- Здесь размещаем элементы интерфейса страницы -->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок страницы -->
+
+        <!-- Область фильтров -->
+
+        <!-- Область отображения данных -->
+        <DataGrid x:Name="DataGridSpares" AutoGenerateColumns="False" Margin="446,22,10,0" VerticalAlignment="Top" Grid.Row="1"
+                   SelectionChanged="DataGridSpares_SelectionChanged" Height="423">
+            <!-- Определяем столбцы таблицы с данными -->
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Наиминование" Binding="{Binding Наиминование}" />
+                <DataGridTextColumn Header="Цена" Binding="{Binding Цена}" />
+                <DataGridTextColumn Header="Марка авто" Binding="{Binding [марка авто]}" />
+                <!-- Дополнительные столбцы по необходимости -->
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Добавить" Width="100" Margin="8,392,832,49" Grid.Row="1" Click="Button_Click" />
+        <Button Content="Удалить" Width="100" Margin="260,396,580,45" Grid.Row="1" Click="Button_Click_2" />
+        <Button Content="Сбросить" Width="100" Margin="132,394,708,47" Grid.Row="1" Click="Button_Click_1" />
+        <Label Content="Найти:" HorizontalAlignment="Left" Margin="21,20,0,0" VerticalAlignment="Top" FontSize="20"
+           FontFamily="Times New Roman" FontWeight="Bold" Foreground="#DDFFFFFF" />
+        <TextBox x:Name="TextBoxSearch" HorizontalAlignment="Left" Margin="114,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="656"
+             FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" Foreground="White" TextChanged="TextBoxSearch_TextChanged" Grid.RowSpan="2">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="20,26,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="#DDFFFFFF" FontSize="20"/>
+        <Label Content="Наименование" HorizontalAlignment="Left" Margin="24,68,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="#DDFFFFFF" FontSize="20"/>
+        <Label Content="Марка авто" HorizontalAlignment="Left" Margin="31,172,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="#DDFFFFFF" FontSize="20"/>
+        <Label Content="Цена" HorizontalAlignment="Left" Margin="30,116,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="#DDFFFFFF" FontSize="20"/>
+        <TextBox x:Name="TextBoxId" HorizontalAlignment="Left" Margin="57,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"
+        FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" Foreground="White" Grid.Row="1">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="TextBoxName" HorizontalAlignment="Left" Margin="176,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"
+        FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" Foreground="White" Grid.Row="1">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="TextBoxPrice" HorizontalAlignment="Left" Margin="96,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"
+        FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" Foreground="White" Grid.Row="1">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="TextBoxCarBrand" HorizontalAlignment="Left" Margin="151,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"
+        FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" Foreground="White" Grid.Row="1">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+    </Grid>
+</Page>
